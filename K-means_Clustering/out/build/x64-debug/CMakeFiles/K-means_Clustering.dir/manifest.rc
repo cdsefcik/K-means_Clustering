@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/CompS/source/repos/K-means_Clustering/out/build/x64-debug/CMakeFiles/K-means_Clustering.dir/embed.manifest"
