@@ -1,3 +1,0 @@
-C:/Users/CompS/source/repos/K-means_Clustering/out/build/x64-debug/CMakeFiles/K-means_Clustering.dir
-C:/Users/CompS/source/repos/K-means_Clustering/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/CompS/source/repos/K-means_Clustering/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
