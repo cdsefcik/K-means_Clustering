@@ -153,6 +153,7 @@ int main(int argc, char** argv)
 
 //VARIABLES:
     string nbrOfColumbs = "2";
+    int k = 3;
 
     vector<vector<string>>* rawData = new vector<vector<string>>(inputFile()); //Raw Data
     vector<string> headerRowData = headerRow(rawData);
@@ -199,9 +200,39 @@ int main(int argc, char** argv)
             cout << " " << endl;
         }
 
+        //TEST CLUSTER COORDINATES
+        vector<double> *testCoordinates = new vector<double>();
+        *testCoordinates = { 1,2,3,4,5,6,7,8,9,10};
+
+        //Code builds the clusters:
+        for (int i = 0; i < k; i++) {
+            clusters clusters(i+1, *testCoordinates);
+        }
+
+        cout << " " << endl;
+
+       //Test Minimum Values:
+
+        clusters::clusters(*converted);
+        
+        vector<double> minimumValues = clusters::getMinimumValues();
+        cout << "These are the minimum Values: " << endl;
+        for (const auto& record : minimumValues) {
+                cout << record << " ";
+        }
+
+        cout << " " << endl;
+
+        vector<double> maximumValues = clusters::getMaximumValues();
+        cout << "These are the maximum Values: " << endl;
+        for (const auto& record : maximumValues) {
+            cout << record << " ";
+        }
+
         delete rawData;
         delete converted;
         delete failed;
+        delete testCoordinates;
         
 //Output File Code:
 	return 0;
