@@ -9,23 +9,21 @@
 // TODO: Reference additional headers your program requires here.
 class clusters {
 private:
-	int clusterNumber; //The number identified for this cluster.
-	std::vector<double> clusterCoordinates;
 
 	//STATIC MEMBERS FOR COORDINATE CALCULATIONS:
-	static int numberOfClusters;
+	
 	static std::vector<std::vector<double>> *rawDataforCalcs;
 	static std::vector<double> minimumCoordinates;
 	static std::vector<double> maximumCoordinates;
+	static std::vector<double> centroidCoordinates;
 
 
 	static std::vector<double> minimumCoordinatesCalculations();
 	static std::vector<double> maximumCoordinatesCalculations();
+	static std::vector<double> centroidCalculation();
 
 public:
-	clusters(int clusterNumber, std::vector<double> clusterCoordinates);
 	clusters(std::vector<std::vector<double>> &rawData); //Used for the total RawData
-	clusters(int clusterNumber); //Used for the total RawData
 
 	//Get Minimum values:
 	static std::vector<double> getMinimumValues();
@@ -33,13 +31,19 @@ public:
 	//Get Maximum values:
 	static std::vector<double> getMaximumValues();
 
-	//Get clusterCoordinates
+	//Get Centroid Calculation
+	static std::vector<double> getcentroidCalculation();
 
-	//Set clusterCoordinates
+};
 
-	//Get clusterNumber
+class clusterNode : public clusters {
+private:
+	int clusterNumber; //The number identified for this cluster.
 
-	//STATIC MEMBERS FOR CLUSTER COORDINATE CALCULATIONS:
+	static int numberOfClusters; //Number of total clusters
+
+public:
+
 
 };
 
